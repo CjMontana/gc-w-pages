@@ -20,13 +20,15 @@
     }
     h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
     h2 { font-size: 1.15rem; margin-top: 2rem; }
+    h2[id] { scroll-margin-top: 1rem; }
+    h3 { font-size: 1rem; margin-top: 1.25rem; }
     .meta { opacity: 0.7; font-size: 0.9rem; margin-bottom: 2rem; }
     a { color: #0d9488; }
   </style>
 </head>
 <body>
 <h1>Witly Privacy Policy</h1>
-<p class="meta">Last updated: 19 September 2026 · Product of Glimpse Concepts</p>
+<p class="meta">Last updated: 4 October 2026 · Product of Glimpse Concepts</p>
 
 <p>
   Witly is a user-initiated reply co-pilot. You choose a screenshot or share conversation text;
@@ -43,7 +45,9 @@
 <p>
   You open Witly (or its floating button), pick or capture a screenshot, and optionally add context
   about yourself or the person you are messaging. We generate reply suggestions for you to review.
-  We do not monitor other apps in the background for chat content.
+  We do not monitor other apps in the background for chat content. If you allow optional Photos
+  access, Witly may show a tip for a recent Screenshots-album image when you open the app; analysis
+  still starts only after you choose that tip and confirm Analyze.
 </p>
 
 <h2>Data we process</h2>
@@ -53,18 +57,24 @@
   <li><strong>Optional context</strong> you add (goals, notes, style preferences, profile details).
   </li>
   <li><strong>Account data</strong> if you sign in (for example email via our auth provider).</li>
-  <li><strong>Usage and diagnostics</strong> needed to run the service (limits, errors, device
-    basics).
+  <li><strong>Crash diagnostics</strong> collected so we can keep Witly stable (crash reports and
+    light device and app info). We do not include chat text or screenshots in those reports.
+    Processed using Google Firebase Crashlytics.
+  </li>
+  <li><strong>Optional product analytics</strong> off unless you opt in. When enabled, we may
+    collect product usage events (not chat text or screenshots). Processed using Google Firebase
+    Analytics when enabled.
+  </li>
+  <li><strong>Product feedback</strong> you submit in Settings (message, category, your account
+    email, and light app/device diagnostics when you leave that option on).
   </li>
 </ul>
 
 <h2>AI processing</h2>
 <p>
   When you start an analysis, screenshot bytes and related text leave your device and are sent to
-  our
-  hosted analysis gateway, which calls third-party AI providers (currently via OpenRouter) to draft
-  replies.
-  Do not submit content you are not comfortable processing with those providers.
+  our analysis service, which uses third-party AI providers to draft replies. Do not submit content
+  you are not comfortable sharing for that processing.
 </p>
 
 <h2>Retention</h2>
@@ -75,6 +85,9 @@
   <li>Suggestion rounds may be stored briefly on device (for example up to 24 hours).</li>
   <li>Contacts, styles, and context documents you save remain until you delete them or delete your
     account.
+  </li>
+  <li>Product feedback you submit is kept so we can improve the product, until you delete your
+    account or we remove handled notes.
   </li>
   <li>Conversation snippets and chosen replies may be kept to personalize history (default window
     described in-app / product docs).
@@ -90,19 +103,65 @@
 
 <h2>Permissions</h2>
 <p>
-  Depending on platform, Witly may request access such as photos or files (to pick screenshots),
+  Depending on platform, Witly may request access such as photos or media (to pick screenshots, and
+  optionally to suggest a recent Screenshots-album image when you open the app),
   microphone (optional voice context), overlay / display over other apps (floating button on
   Android),
   and notifications related to the overlay service. You can revoke permissions in system settings.
 </p>
 
-<h2>Account deletion</h2>
+<h2 id="account-deletion">Account deletion</h2>
 <p>
-  You can delete your account in Settings. That removes synced cloud data associated with your
-  account
-  and clears local app data on the device where you confirm deletion, subject to normal backup and
-  legal retention limits.
+  Witly (operated by Glimpse Concepts) lets you delete your account and associated data.
+  You do not need to keep the app installed to request deletion.
 </p>
+
+<h3>Delete in the Witly app (recommended)</h3>
+<ol>
+  <li>Open Witly and sign in.</li>
+  <li>Go to <strong>Settings → Account</strong>.</li>
+  <li>Tap <strong>Delete account</strong> and confirm.</li>
+</ol>
+<p>
+  This permanently deletes your Witly cloud account and synced data, then clears Witly data on
+  the device where you confirm deletion (including short-lived screenshot cache). It cannot be
+  undone.
+</p>
+
+<h3>Request deletion without the app</h3>
+<p>
+  If you no longer have Witly installed, email
+  <a href="mailto:privacy@glimpseconcepts.com?subject=Witly%20account%20deletion%20request">privacy@glimpseconcepts.com</a>
+  with subject line <strong>Witly account deletion request</strong>.
+  Include the email address on your Witly account (Google/Apple/email sign-in).
+  We will verify ownership and delete the account and associated cloud data.
+  We aim to complete verified requests within 30 days (sooner when practical).
+</p>
+
+<h3>What we delete</h3>
+<ul>
+  <li>Your Witly authentication account (sign-in identity tied to Witly).</li>
+  <li>Synced cloud data for that account (for example contacts, chat styles, context documents,
+    and history synced to our servers).
+  </li>
+  <li>On the device where you use in-app delete: local Witly database rows for your account, auth
+    session, and ephemeral screenshot cache.
+  </li>
+</ul>
+
+<h3>What may remain</h3>
+<ul>
+  <li>Data we must keep for legal, security, fraud-prevention, or accounting obligations, for as
+    long as required.
+  </li>
+  <li>Aggregated or anonymized analytics that no longer identify you.</li>
+  <li>Copies in device/OS backups outside Witly’s control (you can clear those from the
+    device/backup settings).
+  </li>
+  <li>Content already processed by third-party AI providers for a past analysis, subject to those
+    providers’ retention terms (we do not intentionally keep raw screenshots after processing).
+  </li>
+</ul>
 
 <h2>Children</h2>
 <p>Witly is not directed at children under 13 (or the minimum age required in your region).</p>
